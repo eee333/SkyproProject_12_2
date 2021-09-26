@@ -23,16 +23,13 @@
   <main class="container">
     <section class="item-card">
       <h1 class="item-card__title title">{{ entity.name }}</h1>
-      <a href="/card/{{ entity.id }}/short" class="item-card__more">Показать в кратком формате</a>
+      <a href="#" class="item-card__more">Показать в полном формате</a>
       <div class="item-card__card">
         <div class="item-card__img-wrapper">
           <img src="../static/{{ entity.img }}" srcset="../static/{{ entity.img_set }}" alt="" class="item-card__img" />
         </div>
-        <p class="item-card__info">Модель: {{ entity.model }}</p>
-        <p class="item-card__info">Год выпуска: {{ entity.year }}</p>
-        <p class="item-card__info">CPU: {{ entity.cpu }} </p>
+        <p class="item-card__info">CPU: {{ entity.cpu }}</p>
         <p class="item-card__info">RAM: {{ entity.ram }}</p>
-        <p class="item-card__info">GPU: {{ entity.video }}</p>
         <p class="item-card__info">Цена: {{ entity.price }}</p>
       </div>
     </section>
