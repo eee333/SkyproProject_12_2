@@ -14,7 +14,15 @@ def index():
 
 @app.route('/paging')
 def paging():
-    return render_template("main.html")
+    max_items = 3 # Number of elements per page
+    page = int(request.args.get('p', 1))
+    with open('entities.json', encoding="utf-8") as f:
+        entities = json.load(f)
+    total_items = len(entities)
+    last_page = total_items // max_items
+    items_show = entities[(page-1)*max_items:page*max_items]
+
+    return render_template("main.html", entities=items_show, total_items=total_items, page=page, last_page=last_page)
 
 
 @app.route('/search')
