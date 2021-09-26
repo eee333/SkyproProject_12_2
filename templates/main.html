@@ -22,6 +22,10 @@
 </header>
 <main class="container">
     <section class="items">
+        <div class="pagin-top">
+            <h2>Всего в наличие: 9</h2>
+            <p>Страница 1 из 3</p>
+        </div>
         <div class="items__wrapper">
             {% for e in entities %}
             <div class="items__item item">
@@ -35,6 +39,14 @@
                 </a>
             </div>
             {% endfor %}
+        </div>
+        <div class="pagin-bottom">
+            <p>
+                Перейти к странице:
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+            </p>
         </div>
     </section>
 </main>
