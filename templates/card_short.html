@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Полная карточка товара</title>
-  <link href="../static/css/styles.min.css" rel="stylesheet">
+  <link href="../../static/css/styles.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
       <a href="/card/{{ entity.id }}" class="item-card__more">Показать в полном формате</a>
       <div class="item-card__card">
         <div class="item-card__img-wrapper">
-          <img src="../static/{{ entity.img }}" srcset="../static/{{ entity.img_set }}" alt="" class="item-card__img" />
+          <img src="../../static/{{ entity.img }}" srcset="../../static/{{ entity.img_set }}" alt="" class="item-card__img" />
         </div>
         <p class="item-card__info">CPU: {{ entity.cpu }}</p>
         <p class="item-card__info">RAM: {{ entity.ram }}</p>
