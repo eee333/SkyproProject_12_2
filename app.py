@@ -42,7 +42,7 @@ def card(eid: int):
 
 
 @app.route('/card/<int:eid>/short')
-def card(eid: int):
+def card_short(eid: int):
     with open('entities.json', encoding="utf-8") as f:
         entities = json.load(f)
         for ent in entities:
