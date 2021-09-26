@@ -37,6 +37,25 @@ def search():
             for e in entities:
                 if e["model"] == model:
                     response.append(e)
+            if len(response) == 0:
+                model_split = model.split(" ")
+                for e in entities:
+                    source_find = e["model"]
+                    if source_find.split(" ")[0] == model_split[0]:
+                        response.append(e)
+                if len(response) == 0 and " " in model:
+                    for e in entities:
+                        source_find = e["model"]
+                        if " " in source_find:
+                            if source_find.split(" ")[1] == model_split[1]:
+                                response.append(e)
+                else:
+                    for e in entities:
+                        source_find = e["model"]
+                        if " " in source_find:
+                            if source_find.split(" ")[1] == model:
+                                response.append(e)
+
         return render_template("search_ause.html", entities=response)
 
 
