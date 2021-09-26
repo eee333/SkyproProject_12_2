@@ -23,7 +23,7 @@
   <main class="container">
     <section class="item-card">
       <h1 class="item-card__title title">{{ entity.name }}</h1>
-      <a href="#" class="item-card__more">Показать в полном формате</a>
+      <a href="/card/{{ entity.id }}" class="item-card__more">Показать в полном формате</a>
       <div class="item-card__card">
         <div class="item-card__img-wrapper">
           <img src="../static/{{ entity.img }}" srcset="../static/{{ entity.img_set }}" alt="" class="item-card__img" />
